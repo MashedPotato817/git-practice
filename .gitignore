@@ -1,0 +1,8 @@
+# Windows 系统文件
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Office / 编辑器临时文件
+~$*
+*.tmp
