@@ -65,7 +65,7 @@ git push -u origin feat/images-<练习者id>
 
 - fork 者推送到自己的 fork；collaborator 推送到本仓库的同名分支
 - **禁止直接 push main**，一切通过 PR 合并
-- 在 GitHub 页面发起 Pull Request，标题按 commit 规范书写，描述中附图片预览；PR 模板会引导你完成自检
+- 在 GitHub 页面发起 Pull Request，标题按 commit 规范书写，描述中附图片预览；PR 模板会引导你完成自检（模板仅在网页创建时自动带出，请确认内容完整）
 
 ## 维护者审核
 
@@ -97,9 +97,13 @@ git branch -d feat/images-<练习者id>                # 删除本地分支
 git push origin --delete feat/images-<练习者id>     # collaborator 删除远程分支（fork 者在自己 fork 页面删除）
 ```
 
+**Q：首次 push 时弹出浏览器要求登录？**
+
+这是 Git Credential Manager 在进行 GitHub 授权，按提示在浏览器中完成登录即可，之后不会频繁再弹。
+
 ## 成果一览
 
-完成练习后，把自己的成果加进下表（这也是 PR 的一部分）：
+完成练习后，把自己的成果加进下表（这也是 PR 的一部分），图片链接列使用 `[文件名](assets/images/xxx.png)` 格式：
 
 | 练习者 id | 任务 | 图片链接 | 日期 |
 |-----------|------|----------|------|
