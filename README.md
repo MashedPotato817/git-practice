@@ -89,6 +89,14 @@ git merge main -m "chore(branch): 同步main最新改动"
 
 打开冲突文件，理解双方意图后手动合并，`git add` 后再 commit，不要机械丢弃任何一方的内容。
 
+**Q：PR 合并后，如何清理分支？**
+
+```bash
+git checkout main && git pull
+git branch -d feat/images-<练习者id>                # 删除本地分支
+git push origin --delete feat/images-<练习者id>     # collaborator 删除远程分支（fork 者在自己 fork 页面删除）
+```
+
 ## 成果一览
 
 完成练习后，把自己的成果加进下表（这也是 PR 的一部分）：
