@@ -103,4 +103,4 @@ git push origin --delete feat/images-<练习者id>     # collaborator 删除远�
 
 | 练习者 id | 任务 | 图片链接 | 日期 |
 |-----------|------|----------|------|
-| （等待第一位练习者） | | | |
+| [MashedPotato817](https://github.com/MashedPotato817) | 系统框图 | [系统框图-MashedPotato817](assets/images/系统框图-MashedPotato817.png) | 2026-09-03 |
