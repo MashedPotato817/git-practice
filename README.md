@@ -1,110 +1,53 @@
-# Git 练习仓库
+# MUM Workflows
 
-通过「选提示词 → AI 生图 → 提交 → PR」的完整流程，练习 Git 协作：fork / clone、分支、规范 commit、push、Pull Request。
+面向全国大学生数学建模竞赛（CUMCM）、美赛（MCM/ICM）、电工杯等赛事的轻量协作参考仓库。它提供赛前准备、赛中接力、项目模板与可复用 Skill；不提供赛题答案，也不替代当届官方规则。
 
-仓库地址：<https://github.com/MashedPotato817/git-practice>
+## 先从这里开始
 
-## 练习目标
+1. 想系统学习：从 [教程路线](tutorials/README.md) 开始。
+2. 想马上动手：选择 [练习区](practice/README.md) 的一个练习。
+3. 准备开赛：复制 [项目骨架](templates/project-starter/)，完成 [赛前准备](workflows/preparation.md)。
+4. 已经开赛：按 [72 小时赛中工作流](workflows/competition-72h.md) 建任务卡、决策日志和可复现入口。
+5. 使用 AI 协作：阅读 [竞赛项目工作流 Skill](skills/contest-project-workflow/SKILL.md)，或复制到你的 Agent Skill 目录。
 
-- 学会获取远程仓库（fork 与 collaborator 两种方式）
-- 掌握分支的创建与切换
-- 按 `.agents/skills/git-workflow/SKILL.md` 的规范提交
-- push 到自己的分支并发起 Pull Request
+> 赛题、原始附件、个人信息和未公开的比赛结果不应进入公开仓库。参赛期间请使用**私有**竞赛仓库，并以当届官方规则为准。
 
-## 前置要求
+## 仓库地图
 
-- 本机安装 Git
-- 注册 GitHub 账号
-- 任一 AI 生图模型（如 GPT-Image2），用于生成任务图片
-
-## 第一步：获取仓库（二选一）
-
-**路径 A：fork**（没有本仓库写权限时使用）
-
-1. 打开仓库页面，点击右上角 `Fork`，将仓库复制到自己账号下
-2. 克隆你自己的 fork：
-
-   ```bash
-   git clone https://github.com/<你的用户名>/git-practice.git
-   ```
-
-**路径 B：共同创作者**（已被邀请为 collaborator）
-
-```bash
-git clone https://github.com/MashedPotato817/git-practice.git
+```text
+preference/   参考资料：赛事、方法、工具与外部参考资料索引
+tutorials/    教程：按顺序阅读的学习材料
+practice/     练习区：可实际完成并自检的任务
+workflows/    使用手册：赛前、赛中、交接与终检操作卡
+templates/    可复制到私有竞赛仓库的项目与论文骨架
+skills/       可被 Agent/人工复用的协作 Skill
+docs/         本仓库维护说明、演进计划与维护者资料
+.github/      本仓库维护使用的 Issue 与 Pull Request 模板
 ```
 
-## 第二步：创建工作分支
+## 不同目录怎么用
 
-```bash
-git checkout -b feat/images-<练习者id>
-```
+| 你要做什么 | 先去哪里 | 完成标志 |
+| --- | --- | --- |
+| 查找方法、工具或赛事参考入口 | `preference/` | 知道资料来源、适用边界与官方复核要求 |
+| 从零学习协作与建模项目组织 | `tutorials/` | 能说清每一步的目的，并完成对应练习 |
+| 亲手练 Git、图表或论文装配 | `practice/` | 有可检查的交付物和自检记录 |
+| 真实比赛中组织团队工作 | `workflows/` + `templates/` | 私有项目能被队友接手和复现 |
+| 增补或维护这个参考仓库 | `docs/` + `CONTRIBUTING.md` | 提交内容可公开、可验证、可维护 |
 
-分支命名等约定统一见 [assets/image-prompts](assets/image-prompts/README.md)。
+## 最小协作约定
 
-## 第三步：领取任务并生成图片
+- `main` 只保留已验证、可交接的内容；每个任务在独立分支完成后以 PR 合并。
+- 每个子问题先建任务卡，再写代码；结论必须能追溯到数据、参数、命令和图表。
+- 原始数据与外部资料默认本地保存；提交前先检查是否含敏感信息、二进制大文件和 LaTeX 编译产物。
+- 规则、格式和 AI 使用要求会随年份变化。模板只提供核对入口，不宣称永久合规。
 
-前往 [assets/image-prompts](assets/image-prompts/README.md) 选择一个任务，复制提示词生成图片，并按其中的约定命名、放入 `assets/images/`。
+详见 [团队协作约定](workflows/team-collaboration.md) 与 [提交前检查清单](workflows/pre-submit-checklist.md)。
 
-## 第四步：提交
+## 设计边界
 
-提交信息遵循 `.agents/skills/git-workflow/SKILL.md`，规范详解见 [preference/Git 提交信息规范](preference/Git%20提交信息规范.md)，常用命令见 [preference/Git 常用指令速查](preference/Git%20常用指令速查.md)。
+本仓库刻意保持轻量：不内置复杂评分器、在线任务系统或特定题目的答案。若需要更完整的阶段化 Agent 流程，可研究 [mathmodel-skill](https://github.com/handsomeZR-netizen/mathmodel-skill)；其中的共享决策日志与竞赛差异分层是本仓库的参考来源，但本仓库的文档与模板独立维护。
 
-```bash
-git add .
-git commit -m "feat(images): 添加系统框图-张三"
-```
+## 开源与使用
 
-开发过程中可以随时提交保存进度，不要求一次到位。
-
-## 第五步：推送并提交 PR
-
-```bash
-git push -u origin feat/images-<练习者id>
-```
-
-- fork 者推送到自己的 fork；collaborator 推送到本仓库的同名分支
-- **禁止直接 push main**，一切通过 PR 合并
-- 在 GitHub 页面发起 Pull Request，标题按 commit 规范书写，描述中附图片预览；PR 模板会引导你完成自检（模板仅在网页创建时自动带出，请确认内容完整）
-
-## 维护者审核
-
-维护者确认暂定稳定后，使用 "Create a merge commit" 合并，并将合并消息编辑为规范格式（与 PR 标题一致）。
-
-## FAQ
-
-**Q：main 有更新，如何同步到我的分支？**
-
-```bash
-git checkout main && git pull   # fork 者先在 GitHub 页面点击 Sync fork
-git checkout feat/images-<练习者id>
-git merge main -m "chore(branch): 同步main最新改动"
-```
-
-**Q：push 被拒（rejected）？**
-
-通常是远程分支已有新提交，先执行 `git pull --rebase` 或按上一条同步 main 后再推。
-
-**Q：遇到合并冲突怎么办？**
-
-打开冲突文件，理解双方意图后手动合并，`git add` 后再 commit，不要机械丢弃任何一方的内容。
-
-**Q：PR 合并后，如何清理分支？**
-
-```bash
-git checkout main && git pull
-git branch -d feat/images-<练习者id>                # 删除本地分支
-git push origin --delete feat/images-<练习者id>     # collaborator 删除远程分支（fork 者在自己 fork 页面删除）
-```
-
-**Q：首次 push 时弹出浏览器要求登录？**
-
-这是 Git Credential Manager 在进行 GitHub 授权，按提示在浏览器中完成登录即可，之后不会频繁再弹。
-
-## 成果一览
-
-完成练习后，把自己的成果加进下表（这也是 PR 的一部分），图片链接列使用 `[文件名](assets/images/xxx.png)` 格式：
-
-| 练习者 id | 任务 | 图片链接 | 日期 |
-|-----------|------|----------|------|
-| [MashedPotato817](https://github.com/MashedPotato817) | 系统框图 | [系统框图-MashedPotato817](assets/images/系统框图-MashedPotato817.png) | 2026-09-03 |
+本仓库以 [MIT License](LICENSE) 发布。你可以使用、复制、修改和分发仓库中的内容，但须保留许可证与版权声明。第三方资料、当届官方规则、赛题附件及其各自使用条款不因本许可证而改变。

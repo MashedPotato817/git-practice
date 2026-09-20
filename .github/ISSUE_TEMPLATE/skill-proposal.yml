@@ -1,0 +1,23 @@
+name: Skill 提案
+description: 提议新增或改进一个通用数模 Skill
+title: "skill: "
+labels: ["skill"]
+body:
+  - type: textarea
+    attributes:
+      label: 要解决的场景
+      description: 说明触发条件与目标用户。
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 建议输入与产物
+      description: 写清需要确认的信息、输出文件和人工确认点。
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 边界与风险
+      description: 说明它不能替代什么判断，以及是否涉及随年份变化的规则。
+    validations:
+      required: true
