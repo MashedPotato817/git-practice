@@ -8,7 +8,7 @@
 2. 想马上动手：选择 [练习区](practice/README.md) 的一个练习。
 3. 准备开赛：复制 [项目骨架](templates/project-starter/)，完成 [赛前准备](workflows/preparation.md)。
 4. 已经开赛：按 [72 小时赛中工作流](workflows/competition-72h.md) 建任务卡、决策日志和可复现入口。
-5. 使用 AI 协作：阅读 [竞赛项目工作流 Skill](skills/contest-project-workflow/SKILL.md)，或复制到你的 Agent Skill 目录。
+5. 使用 Agent 或需要标准协作步骤：从 [Skill 库](skills/README.md) 选择对应的 `MCM-` Skill。
 
 > 赛题、原始附件、个人信息和未公开的比赛结果不应进入公开仓库。参赛期间请使用**私有**竞赛仓库，并以当届官方规则为准。
 
@@ -20,7 +20,7 @@ tutorials/    教程：按顺序阅读的学习材料
 practice/     练习区：可实际完成并自检的任务
 workflows/    使用手册：赛前、赛中、交接与终检操作卡
 templates/    可复制到私有竞赛仓库的项目与论文骨架
-skills/       可被 Agent/人工复用的协作 Skill
+skills/       四个 `MCM-` 开头、可被 Agent/人工复用的协作 Skill
 docs/         本仓库维护说明、演进计划与维护者资料
 .github/      本仓库维护使用的 Issue 与 Pull Request 模板
 ```
