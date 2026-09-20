@@ -1,0 +1,26 @@
+name: 工作流反馈
+description: 提出赛前或赛中协作流程的改进建议
+title: "workflow: "
+labels: ["workflow"]
+body:
+  - type: dropdown
+    attributes:
+      label: 适用阶段
+      options:
+        - 赛前准备
+        - 开赛 0-4 小时
+        - 主体建模与实验
+        - 论文与交付
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 观察到的问题
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 可复用的改进建议
+    validations:
+      required: true

@@ -1,0 +1,28 @@
+# 本地原始附件、外部下载与敏感数据
+data/raw/*
+!data/raw/README.md
+data/external/*
+!data/external/README.md
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# LaTeX 编译副产物
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# 编辑器与系统文件
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+~$*

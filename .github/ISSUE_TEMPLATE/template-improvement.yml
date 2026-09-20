@@ -1,0 +1,21 @@
+name: 模板改进
+description: 报告模板缺口、歧义或可复现性问题
+title: "template: "
+labels: ["template"]
+body:
+  - type: input
+    attributes:
+      label: 受影响文件
+      placeholder: templates/project-starter/...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 当前问题
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 建议改法
+    validations:
+      required: true
