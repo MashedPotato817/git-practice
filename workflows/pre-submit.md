@@ -5,4 +5,4 @@
 3. 由不同成员检查匿名、占位符、引用、AI 使用要求、文件名、页数和 PDF 视觉效果。
 4. 明确最终文件、提交人、提交时间和备份位置；提交后保留系统回执。
 
-详细勾选项见 [`docs/pre-submit-checklist.md`](../docs/pre-submit-checklist.md)。
+详细勾选项见 [提交前检查清单](pre-submit-checklist.md)。

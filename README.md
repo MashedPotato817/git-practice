@@ -15,15 +15,25 @@
 ## 仓库地图
 
 ```text
-skills/       可复用的 Agent/人工协作 Skill
-workflows/    赛前与赛中的操作流程
-templates/    可 fork/复制的竞赛项目骨架与论文骨架
-library/      赛事、方法、工具与外部参考资料索引
-tutorials/    从入门到终检的连续教程
-practice/     Git 协作、小型建模和论文装配练习
-docs/         协作原则、角色边界、检查清单与维护说明
-.github/      Issue 与 Pull Request 模板
+preference/   参考资料：赛事、方法、工具与外部参考资料索引
+tutorials/    教程：按顺序阅读的学习材料
+practice/     练习区：可实际完成并自检的任务
+workflows/    使用手册：赛前、赛中、交接与终检操作卡
+templates/    可复制到私有竞赛仓库的项目与论文骨架
+skills/       可被 Agent/人工复用的协作 Skill
+docs/         本仓库维护说明、演进计划与维护者资料
+.github/      本仓库维护使用的 Issue 与 Pull Request 模板
 ```
+
+## 不同目录怎么用
+
+| 你要做什么 | 先去哪里 | 完成标志 |
+| --- | --- | --- |
+| 查找方法、工具或赛事参考入口 | `preference/` | 知道资料来源、适用边界与官方复核要求 |
+| 从零学习协作与建模项目组织 | `tutorials/` | 能说清每一步的目的，并完成对应练习 |
+| 亲手练 Git、图表或论文装配 | `practice/` | 有可检查的交付物和自检记录 |
+| 真实比赛中组织团队工作 | `workflows/` + `templates/` | 私有项目能被队友接手和复现 |
+| 增补或维护这个参考仓库 | `docs/` + `CONTRIBUTING.md` | 提交内容可公开、可验证、可维护 |
 
 ## 最小协作约定
 
@@ -32,7 +42,7 @@ docs/         协作原则、角色边界、检查清单与维护说明
 - 原始数据与外部资料默认本地保存；提交前先检查是否含敏感信息、二进制大文件和 LaTeX 编译产物。
 - 规则、格式和 AI 使用要求会随年份变化。模板只提供核对入口，不宣称永久合规。
 
-详见 [协作约定](docs/collaboration.md) 与 [提交前检查清单](docs/pre-submit-checklist.md)。
+详见 [团队协作约定](workflows/team-collaboration.md) 与 [提交前检查清单](workflows/pre-submit-checklist.md)。
 
 ## 设计边界
 
